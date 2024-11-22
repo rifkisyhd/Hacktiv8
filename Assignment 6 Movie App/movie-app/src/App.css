@@ -1,3 +1,7 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
 .App {
   text-align: center;
   background-color: #1B1B1B;
@@ -22,12 +26,20 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
+  font-size: 1rem;
 }
 
-.Movie-wrapper{
+.Movie-list{
 width: 500px;
-flex-wrap: wrap;
-background-color: antiquewhite;
-color: black;
+text-align: start;
 }
 
+.Movie-info{
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+
+.Movie-tittle{
+  font-weight: bold;
+}
