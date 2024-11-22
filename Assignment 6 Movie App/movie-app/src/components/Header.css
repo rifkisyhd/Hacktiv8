@@ -1,0 +1,55 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    display: flex;
+    height: 30px;
+    width: 1200px;
+  background-color:#151515;
+  color: white;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 1.8rem;
+  font-style: italic;
+  color: red
+}
+
+.header-nav ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.header-nav li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.header-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.header-nav a:hover {
+    color: red;
+}
+
+.Movie-search{
+    height: 10px;
+    width: 200px;
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .Movie-search::placeholder{
+    font-size: 0.8rem;
+    color: gray;
+  }
