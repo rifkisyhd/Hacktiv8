@@ -21,7 +21,7 @@ const App = () => {
             const response = await searchMovie(trimmedQuery);
             setMovieList(response?.Search || []); // Pastikan untuk mengambil hasil pencarian yang benar
         } catch (error) {
-            console.error('Error searching movie:', error);
+            console.error('Error mencari film:', error);
         }
     } else {
         getMovieList().then(setMovieList);

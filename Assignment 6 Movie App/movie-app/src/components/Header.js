@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.css'; 
+import Search from './Search';
 
 const Header = ({ onSearch }) => {
     
@@ -15,11 +16,7 @@ const Header = ({ onSearch }) => {
                     <li><a href="/anime">Anime</a></li>
                 </ul>
             </nav>
-                <input 
-                className="Movie-search" 
-                placeholder="Cari Film Anda..." 
-                onChange={({ target }) => onSearch(target.value)} 
-            />
+               <Search onSearch={onSearch} />
         </header>
     );
 };
