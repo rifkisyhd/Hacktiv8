@@ -13,21 +13,25 @@ const StarIcon = () => (
   </svg>
 );
 
-const Movies = ({ popularMovies }) => {
-  if (!popularMovies || !Array.isArray(popularMovies)) return null;
-  return popularMovies.map((movie, i) => (
+const Movies = ({ MovieList }) => {
+  if (!MovieList || !Array.isArray(MovieList)) return null;
+
+console.log(MovieList);
+
+  
+  return MovieList.map((movie, i) => (
     <div className="Movie-list" key={i}>
       <img
         className="Movie-image"
-        src={`${process.env.REACT_APP_IMAGE_BASE_URL}${movie.poster_path}`}
-        alt=""
+        src={movie.Poster}
+        alt={movie.Title}
       />
       <div className="Movie-info">
-        <div className="Movie-title">{movie.title}</div>
-        {/* <div className="Movie-date">{movie.release_date}</div> */}
-        <div className="Movie-rate">
-          <StarIcon /> {movie.vote_average}
-        </div>
+        <div className="Movie-title">{movie.Title}</div>
+        <div className="Movie-year">{movie.Year}</div>
+        {/* <div className="Movie-rate">
+         <StarIcon /> {movie.imdbRating}
+        </div> */}
       </div>
     </div>
   ));

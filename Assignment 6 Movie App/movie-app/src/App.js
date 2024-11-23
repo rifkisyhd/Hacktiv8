@@ -5,33 +5,34 @@ import Header from './components/Header';
 import Movies from './components/Movies';
 
 const App = () => {
-  const [popularMovies, setPopularMovies] = useState([]);
+  const [MovieList, setMovieList] =
+  useState([]);
 
   useEffect(() => {
     getMovieList().then((result) => {
-      setPopularMovies(result);
+      setMovieList(result);
     });
   }, []);
 
   const search = async (query) => {
     const trimmedQuery = query.trim();
     if (trimmedQuery.length > 3) {
-      try {
-        const response = await searchMovie(trimmedQuery);
-        setPopularMovies(response?.results);
-      } catch (error) {
-        console.error('Error searching movie:', error);
-      }
+        try {
+            const response = await searchMovie(trimmedQuery);
+            setMovieList(response?.Search || []); // Pastikan untuk mengambil hasil pencarian yang benar
+        } catch (error) {
+            console.error('Error searching movie:', error);
+        }
     } else {
-      getMovieList().then(setPopularMovies);
+        getMovieList().then(setMovieList);
     }
-  };
+};
 
   return (
     <div className="App">
       <Header onSearch={search} />
       <div className="Movie-container">
-        <Movies popularMovies={popularMovies} />
+        <Movies MovieList={MovieList} />
       </div>
     </div>
   );
