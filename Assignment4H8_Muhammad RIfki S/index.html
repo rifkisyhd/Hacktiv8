@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- link tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Assignment 4</title>
+  </head>
+  
+  <body class="h-[100vh] overflow-hidden">
+    
+    <main class="bg-gray-200 h-[90vh] overflow-y-auto px-[32px] pt-8">
+      <div class="flex gap-24 px-8 py-4 bg-white rounded-md shadow-lg">
+        <div class="flex items-center justify-center">
+          <img src="./assets/rifki.jpg" alt
+            class="aspect-square h-[150px] rounded-full object-cover mr-8">
+          <div>
+            <div>
+              <h2 id="display-nama" class="text-3xl font-bold">Rifki Syahada</h2>
+              <h3 id="display-role"
+                class="font-medium text-gray-500 mt-1 text-[14px]">Frontend
+                Developer</h3>
+            </div>
+            <div class="mt-6">
+              <button
+                class="text-[12px] px-6 py-2 bg-blue-600 rounded-sm text-white font-semibold mr-2 hover:bg-blue-900"
+                onClick="editButton()">Edit</button>
+              <a href="https://rifkisyhd.github.io/Portofolio-rifki" target="_blank"
+                class="text-[12px] px-6 py-2 rounded-sm text-green-500 font-semibold border border-green-500 hover:bg-green-500 hover:text-white">Resume</a>
+            </div>
+          </div>
+        </div>
+        <div class="my-auto border-l-gray-400">
+          <table>
+            <tr>
+              <td class="pr-10 font-semibold">Availability</td>
+              <td id="display-availability"
+                class="font-medium text-gray-400">Fulltime</td>
+            </tr>
+            <tr>
+              <td class="pr-10 font-semibold">Usia</td>
+              <td id="display-usia" class="font-medium text-gray-400">19</td>
+            </tr>
+            <tr>
+              <td class="pr-10 font-semibold">Lokasi</td>
+              <td id="display-lokasi"
+                class="font-medium text-gray-400">Surabaya</td>
+            </tr>
+            <tr>
+              <td class="pr-10 font-semibold">Pengalaman</td>
+              <td id="display-pengalaman" class="font-medium text-gray-400">21
+                Tahun</td>
+            </tr>
+            <tr>
+              <td class="pr-10 font-semibold">Email</td>
+              <td id="display-email"
+                class="font-medium text-gray-400">rifkisyahada81@gmail.com</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- form edit -->
+      <form action="#" class="hidden w-full px-8 py-4 mt-8 bg-white rounded-md"
+        id="form" onSubmit="updateBiodata(event)">
+        <div class="w-full">
+          <label for="nama" class="block text-[16px] font-medium">Nama</label>
+          <input type="text" id="nama"
+            class="w-full px-2 py-1 mt-1.5 border border-gray-500 rounded-sm">
+        </div>
+        <div class="w-full mt-1">
+          <label for="role" class="block text-[16px] font-medium">Role</label>
+          <input type="text" id="role"
+            class="w-full px-2 py-1 mt-1.5 border border-gray-500 rounded-sm">
+        </div>
+        <div class="w-full mt">
+          <label for="availability"
+            class="block text-[16px] font-medium">Availability</label>
+          <input type="text" id="availability"
+            class="w-full px-2 py-1 mt-1.5 border border-gray-500 rounded-sm">
+        </div>
+        <div class="w-full mt">
+          <label for="usia" class="block text-[16px] font-medium">Usia</label>
+          <input type="text" id="usia"
+            class="w-full px-2 py-1 mt-1.5 border border-gray-500 rounded-sm">
+        </div>
+        <div class="w-full mt">
+          <label for="lokasi"
+            class="block text-[16px] font-medium">Lokasi</label>
+          <input type="text" id="lokasi"
+            class="w-full px-2 py-1 mt-1.5 border border-gray-500 rounded-sm">
+        </div>
+        <div class="w-full mt">
+          <label for="pengalaman"
+            class="block text-[16px] font-medium">Pengalaman</label>
+          <input type="text" id="pengalaman"
+            class="w-full px-2 py-1 mt-1.5 border border-gray-500 rounded-sm">
+        </div>
+        <div class="w-full mt">
+          <label for="email" class="block text-[16px] font-medium">Email</label>
+          <input type="text" id="email"
+            class="w-full px-2 py-1 mt-1.5 border border-gray-500 rounded-sm">
+        </div>
+        <input type="submit"
+          class="w-full px-3 py-1.5 mt-4 bg-green-700 rounded-md text-white font-semibold"
+          value="Update">
+      </form>
+      <!-- end form edit -->
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
